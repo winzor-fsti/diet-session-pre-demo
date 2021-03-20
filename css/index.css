@@ -182,8 +182,9 @@ pre {
 
 /* Tags */
 .post-tag {
-  display: inline-block;
-  vertical-align: text-top;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   text-transform: uppercase;
   font-size: 0.625em; /* 10px /16 */
   padding: 2px 4px;
@@ -195,7 +196,14 @@ pre {
 }
 a[href].post-tag,
 a[href].post-tag:visited {
-  color: #fff;
+  color: inherit;
+}
+a[href].post-tag:hover,
+a[href].post-tag:focus {
+  background-color: var(--lightgray);
+}
+.postlist-item > .post-tag {
+  align-self: center;
 }
 
 /* Warning */
